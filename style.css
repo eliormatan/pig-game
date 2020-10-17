@@ -1,0 +1,207 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  background-image: url(back5.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: Lato;
+  font-weight: 300;
+  position: relative;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 1100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.player-1-panel {
+  width: 50%;
+  float: left;
+  height: 600px;
+  padding: 100px;
+  position: relative;
+  right: 150px;
+}
+
+.player-2-panel {
+  width: 50%;
+  float: left;
+  height: 600px;
+  padding: 100px;
+  position: relative;
+  left: 150px;
+}
+
+.player-name {
+  color: black;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.player-score {
+  text-align: center;
+  font-size: 80px;
+  font-weight: 1000;
+  color: white;
+  margin-bottom: 130px;
+}
+
+.active {
+  background-color: transparent;
+}
+.active .player-name {
+  font-weight: 300;
+}
+
+.active .player-name::after {
+  content: "\2022";
+  font-size: 47px;
+  position: absolute;
+  color: #eb4d4d;
+  top: -7px;
+  animation: pulse 3s infinite;
+  box-shadow: red;
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    50% { transform: scale(0.85); }
+    to { transform: scale(1); }
+}
+
+.player-1-current,
+.player-2-current {
+  background-color: rgb(200, 238, 150);
+  color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #222;
+}
+
+.player-current-score {
+  font-size: 30px;
+}
+
+.score-limit{
+    position: absolute;
+    width: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Lato;
+    font-weight: 1000;
+    font-size: 15px;
+    top: 510px;
+    padding: 7px;
+    text-align: center;
+}
+
+
+
+button {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: whitesmoke;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 1000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  font-weight: 600;
+  color: purple;
+  margin-right: 20px;
+}
+button:hover .iconify {
+  margin-right: 20px;
+  color: purple;
+}
+
+button:hover i{
+    margin-right: 20px;
+    color: purple;
+}
+
+button:focus {
+  outline: none;
+}
+
+.iconify,i {
+  color:whitesmoke;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 32px;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  transition: margin 0.3s;
+}
+
+.new-button {
+  top: 450px;
+}
+.hold-button {
+  top: 350px;
+}
+.roll-button {
+  top: 400px;
+}
+
+.dice {
+  position: absolute;
+  left: 48%;
+  top: 220px;
+  transform: translateX(-50%);
+  height: 100px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+#dice1{
+    left: 57%
+}
+
+.winner .player-name {
+  font-weight: 300;
+  color: #eb4d4d;
+}
+
