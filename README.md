@@ -1,9 +1,8 @@
 # pig-game
 
-![alt text](https://github.com/eliormatan/pig-game/blob/main/back5.jpg?raw=true)
-
-
 This application allows the users to play some version of the popluar [pig(dice game)](https://en.wikipedia.org/wiki/Pig_(dice_game)).
+
+<img src="https://github.com/eliormatan/pig-game/blob/main/winner.png?raw=true" width="500" >
 
 ## How to run:
 
